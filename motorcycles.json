@@ -1,0 +1,58 @@
+[
+  {
+    "id": "8",
+    "name": "Super Duke R",
+    "manufacturer": "KTM",
+    "category": "Naked",
+    "price": 86000,
+    "image_url": "https://cdn.freecodecamp.org/curriculum/labs/motorcycle-suzuki-sv650.jpg",
+    "description": "The Beast returns with 180hp of raw power",
+    "year": 2025,
+    "created_at": "2025-01-08T00:00:00Z"
+  },
+  {
+    "id": "9",
+    "name": "GSX-R1000R",
+    "manufacturer": "Suzuki",
+    "category": "Sport",
+    "price": 70000,
+    "image_url": "https://cdn.freecodecamp.org/curriculum/labs/motorcycle-suzuki-gsxr1000.jpg",
+    "description": "Track-ready sportbike with championship DNA",
+    "year": 2025,
+    "created_at": "2025-01-09T00:00:00Z"
+  },
+  {
+    "id": "10",
+    "name": "Street Glide",
+    "manufacturer": "Harley-Davidson",
+    "category": "Cruiser",
+    "price": 78000,
+    "image_url":  "https://cdn.freecodecamp.org/curriculum/labs/motorcycle-yamaha-vmax.jpg",
+    "description": "Milwaukee-Eight power in a sleek bagger",
+    "year": 2025,
+    "created_at": "2025-01-10T00:00:00Z"
+  },
+  {
+    "id": "12",
+    "name": "Multistrada V4",
+    "manufacturer": "Ducati",
+    "category": "Adventure",
+    "price": 68000,
+    "image_url": "https://cdn.freecodecamp.org/curriculum/labs/motorcycle-yamaha-mt3.jpg",
+    "description": "Italian style meets adventure capability",
+    "year": 2025,
+    "created_at": "2025-01-12T00:00:00Z"
+  },
+  {
+    "id": "13",
+    "name": "Speed Triple 1200",
+    "manufacturer": "Triumph",
+    "category": "Naked",
+    "price": 90000,
+    "image_url": "https://cdn.freecodecamp.org/curriculum/labs/motorcycle-honda-transalp.jpg",
+    "description": "British muscle bike with cutting-edge tech",
+    "year": 2025,
+    "created_at": "2025-01-13T00:00:00Z"
+  }
+  
+]
