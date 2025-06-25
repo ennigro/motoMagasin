@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Market - Trouvez votre PC</title>
+   
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="bg-slate-50">
+    <div id="app">
+        <header class="bg-slate-900/80 backdrop-blur-lg sticky top-0 z-50 border-b border-slate-800 shadow-sm">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                    <div class="flex items-center gap-3">
+                        <span class="text-3xl">💻</span>
+                        <h1 class="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600 tracking-tight">
+                            PC Market
+                        </h1>
+                    </div>
+                    
+                    <div class="flex-1 w-full md:w-auto md:max-w-md">
+                        <div class="relative group">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <svg class="h-5 w-5 text-gray-400 group-focus-within:text-orange-500 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                </svg>
+                            </div>
+                            <input
+                                type="text"
+                                id="name-filter-input"
+                                placeholder="Rechercher par nom, marque..."
+                                class="w-full px-4 py-2.5 pl-10 rounded-xl bg-slate-800 text-white placeholder-gray-400 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all shadow-inner"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white overflow-hidden py-24 sm:py-32">
+            
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-4xl opacity-30 pointer-events-none">
+                <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-orange-500 blur-[120px] rounded-full mix-blend-screen"></div>
+            </div>
+            
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
+                <h2 class="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight">
+                    Trouvez votre <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-300">PC idéal</span>
+                </h2>
+                <p class="text-lg md:text-2xl text-blue-100 max-w-2xl mx-auto font-light leading-relaxed mb-8 shadow-sm">
+                   Découvrez notre sélection rigoureuse d'ordinateurs portables pour le développement, les études, le travail professionnel et le gaming.
+                </p>
+            </div>
+            
+            <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-slate-50 to-transparent"></div>
+        </section>
+
+        <!-- Main Content -->
+        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            
+            
+            <div class="mb-6 text-gray-600">
+                <p>Affichage de <span id="results-number" class="font-bold text-gray-900">0</span> ordinateurs</p>
+            </div>
+
+            
+            <div id="loading-container" class="flex justify-center items-center py-20" style="display: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="animate-spin text-orange-500"><path d="M21 12a9 9 0 1 1-6.219-8.56"></path></svg>
+            </div>
+
+           
+            <div id="no-results" class="text-center py-20" style="display: none;">
+                <p class="text-xl text-gray-500">Aucun ordinateur ne correspond à votre recherche.</p>
+            </div>
+
+            
+            <div id="products-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Data will be injected here -->
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-slate-900 border-t border-slate-800 text-slate-300 py-12 mt-20 relative overflow-hidden">
+            <div class="absolute bottom-0 right-0 w-64 h-64 bg-orange-500/10 blur-[80px] rounded-full pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 text-center md:text-left">
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-center md:justify-start gap-2">
+                            <span class="text-2xl">💻</span>
+                            <span class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400">PC Market</span>
+                        </div>
+                        <p class="text-sm text-slate-400 leading-relaxed max-w-xs mx-auto md:mx-0">
+                            La première destination au Maroc pour les ordinateurs portables performants. Gaming, développement ou bureautique.
+                        </p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <h4 class="text-white font-semibold tracking-wider uppercase text-sm">Catégories</h4>
+                        <ul class="space-y-2 text-sm text-slate-400">
+                            <li><a href="#" class="hover:text-orange-500 transition-colors">PC Gamer</a></li>
+                            <li><a href="#" class="hover:text-orange-500 transition-colors">PC Professionnel</a></li>
+                            <li><a href="#" class="hover:text-orange-500 transition-colors">PC Bureautique</a></li>
+                            <li><a href="#" class="hover:text-orange-500 transition-colors">MacBooks</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="space-y-4">
+                        <h4 class="text-white font-semibold tracking-wider uppercase text-sm">Contactez-nous</h4>
+                        <ul class="space-y-2 text-sm text-slate-400">
+                            <li class="flex items-center justify-center md:justify-start gap-2">
+                                <span>📍</span> Kénitra, Maroc
+                            </li>
+                            <li class="flex items-center justify-center md:justify-start gap-2">
+                                <span>📧</span> contactnous@pcmarket.ma
+                            </li>
+                            <li class="flex items-center justify-center md:justify-start gap-2">
+                                <span>📞</span> +212 6 06 00 11 00
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-slate-500">
+                    <p>© 2026 PC Market. Tous droits réservés.</p>
+                    <div class="flex gap-4 mt-4 md:mt-0">
+                        <a href="#" class="hover:text-white transition-colors">Conditions d'utilisation</a>
+                        <a href="#" class="hover:text-white transition-colors">Politique de confidentialité</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.344.0/lucide.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
