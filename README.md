@@ -7,7 +7,7 @@ Une application web pour découvrir et filtrer une sélection de motos haut de g
  
 ##  Démo en ligne
  
- [Voir la démo](#) <!-- Remplace ce lien après avoir activé GitHub Pages -->
+ Voir la démo:  https://ennigro.github.io/motoMagasin/
  
 ##  Aperçu
  
